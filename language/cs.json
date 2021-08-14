@@ -50,6 +50,22 @@
           "description": "Při rozložení karet se bude snažit porovnat počet sloupců a řádků. Poté budou karty upraveny podle velikosti kontejneru."
         },
         {
+          "label": "Row/columns selection",
+          "description": "Enforce the number of rows/columns for the card layout.",
+          "fields": [
+            {
+              "label": "Rows"
+            },
+            {
+              "label": "Columns"
+            }
+          ]
+        },
+        {
+          "label": "Enforce layout on narrow screens",
+          "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used."
+        },
+        {
           "label": "Počet karet k použití",
           "description": "Pokud toto nastavíte na číslo větší než 2, bude hra vybírat náhodné karty ze seznamu karet."
         },
@@ -64,7 +80,8 @@
       "fields": [
         {
           "label": "Barva motivu",
-          "description": "Vyberte barvu pro vytvoření motivu pro vaši karetní hru."
+          "description": "Vyberte barvu pro vytvoření motivu pro vaši karetní hru.",
+          "default": "#909090"
         },
         {
           "label": "Zadní strana karty",

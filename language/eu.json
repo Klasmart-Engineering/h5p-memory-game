@@ -50,6 +50,22 @@
           "description": "Txartelak banatzean lerro eta zutabe kopurua betetzen saiatuko da. Gero, kartak eskalatuko dira."
         },
         {
+          "label": "Row/columns selection",
+          "description": "Enforce the number of rows/columns for the card layout.",
+          "fields": [
+            {
+              "label": "Rows"
+            },
+            {
+              "label": "Columns"
+            }
+          ]
+        },
+        {
+          "label": "Enforce layout on narrow screens",
+          "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used."
+        },
+        {
           "label": "Erabiliko den karta kopurua",
           "description": "2 baino altuagoa den zenbaki bat ezarriz gero jokoak hausazko karta hartuko du karta-zerrendatik."
         },
@@ -64,7 +80,8 @@
       "fields": [
         {
           "label": "Estiloaren kolorea",
-          "description": "Aukeratu kolorea zure karta jokoarentzat estiloa sortzeko."
+          "description": "Aukeratu kolorea zure karta jokoarentzat estiloa sortzeko.",
+          "default": "#909090"
         },
         {
           "label": "Kartaren atzeko aldea",

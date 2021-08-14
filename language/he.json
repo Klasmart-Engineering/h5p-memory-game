@@ -50,6 +50,22 @@
           "description": "ניסיון להתאים בין מספר הטורים והשורות בעת סידור הכרטיסים. לאחר מכן, גודל הכרטיסים יותאם למכל."
         },
         {
+          "label": "Row/columns selection",
+          "description": "Enforce the number of rows/columns for the card layout.",
+          "fields": [
+            {
+              "label": "Rows"
+            },
+            {
+              "label": "Columns"
+            }
+          ]
+        },
+        {
+          "label": "Enforce layout on narrow screens",
+          "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used."
+        },
+        {
           "label": "מספר קלפים לשימוש",
           "description": "להגדיר את זה למספר גדול מ-2 יגרום למשחק לבחור כרטיסים אקראיים מרשימת הכרטיסים."
         },
@@ -64,7 +80,8 @@
       "fields": [
         {
           "label": "צבע נושא",
-          "description": "בחרו צבע ליצירת נושא למשחק הכרטיסים."
+          "description": "בחרו צבע ליצירת נושא למשחק הכרטיסים.",
+          "default": "#909090"
         },
         {
           "label": "גב הכרטיס",

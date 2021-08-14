@@ -50,6 +50,22 @@
           "description": "Intentará igualar el número de columnas y filas al distribuir las tarjetas. Después, las tarjetas se escalarán para que se ajusten al contenedor."
         },
         {
+          "label": "Row/columns selection",
+          "description": "Enforce the number of rows/columns for the card layout.",
+          "fields": [
+            {
+              "label": "Rows"
+            },
+            {
+              "label": "Columns"
+            }
+          ]
+        },
+        {
+          "label": "Enforce layout on narrow screens",
+          "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used."
+        },
+        {
           "label": "Número de tarjetas a utilizar",
           "description": "Establecer esto a un número mayor que 2 hará que el juego seleccione tarjetas aleatorias de la lista de tarjetas."
         },
@@ -64,7 +80,8 @@
       "fields": [
         {
           "label": "Color del tema",
-          "description": "Elegir un color para crear un tema para su juego de cartas."
+          "description": "Elegir un color para crear un tema para su juego de cartas.",
+          "default": "#909090"
         },
         {
           "label": "Parte posterior de la tarjeta",

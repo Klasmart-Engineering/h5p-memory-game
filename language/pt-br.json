@@ -50,6 +50,22 @@
           "description": "Tentará coincidir o número de linhas e colunas quando distribuir os cartões. Após, os cartões serão dimensionados para preencher o espaço."
         },
         {
+          "label": "Row/columns selection",
+          "description": "Enforce the number of rows/columns for the card layout.",
+          "fields": [
+            {
+              "label": "Rows"
+            },
+            {
+              "label": "Columns"
+            }
+          ]
+        },
+        {
+          "label": "Enforce layout on narrow screens",
+          "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used."
+        },
+        {
           "label": "Número de cartas para serem usadas",
           "description": "Colocando um número maior que 2 fara com que o jogo escolha cartões aleatórios da lista de cartões."
         },
@@ -64,7 +80,8 @@
       "fields": [
         {
           "label": "Cor tema",
-          "description": "Escolha uma cor para criar um tema para seu jogo."
+          "description": "Escolha uma cor para criar um tema para seu jogo.",
+          "default": "#909090"
         },
         {
           "label": "Verso do cartão",

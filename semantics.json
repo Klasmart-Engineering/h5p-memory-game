@@ -40,7 +40,9 @@
           "label": "Audio Track",
           "description": "An optional sound that plays when the card is turned.",
           "optional": true,
-          "widgetExtensions": ["AudioRecorder"]
+          "widgetExtensions": [
+            "AudioRecorder"
+          ]
         },
         {
           "name": "match",
@@ -66,7 +68,9 @@
           "label": "Matching Audio Track",
           "description": "An optional sound that plays when the second card is turned.",
           "optional": true,
-          "widgetExtensions": ["AudioRecorder"]
+          "widgetExtensions": [
+            "AudioRecorder"
+          ]
         },
         {
           "name": "description",
@@ -95,6 +99,39 @@
         "description": "Will try to match the number of columns and rows when laying out the cards. Afterward, the cards will be scaled to fit the container.",
         "importance": "low",
         "default": true
+      },
+      {
+        "name": "ratio",
+        "label": "Row/columns selection",
+        "description": "Enforce the number of rows/columns for the card layout.",
+        "type": "group",
+        "expanded": true,
+        "optional": true,
+        "widget": "memorygameinputrow",
+        "fields": [
+          {
+            "name": "rows",
+            "label": "Rows",
+            "type": "number",
+            "optional": true,
+            "min": 1
+          },
+          {
+            "name": "columns",
+            "label": "Columns",
+            "type": "number",
+            "optional": true,
+            "min": 1
+          }
+        ]
+      },
+      {
+        "name": "keepLayout",
+        "type": "boolean",
+        "label": "Enforce layout on narrow screens",
+        "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used.",
+        "importance": "low",
+        "default": false
       },
       {
         "name": "numCardsToUse",

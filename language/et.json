@@ -50,6 +50,22 @@
           "description": "Proovib sobitada ridade ja veergude arvu kaartide asetamisel. Peale seda muudetakse kaartide suurust, et täita neid hoidev raam."
         },
         {
+          "label": "Row/columns selection",
+          "description": "Enforce the number of rows/columns for the card layout.",
+          "fields": [
+            {
+              "label": "Rows"
+            },
+            {
+              "label": "Columns"
+            }
+          ]
+        },
+        {
+          "label": "Enforce layout on narrow screens",
+          "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used."
+        },
+        {
           "label": "Kasutatav kaartide arv",
           "description": "Määrates selle arvu kahest suuremaks valib mäng kaartide loetelust juhuslikud kaardid."
         },
@@ -64,7 +80,8 @@
       "fields": [
         {
           "label": "Teemavärv",
-          "description": "Vali oma mängu teemavärv."
+          "description": "Vali oma mängu teemavärv.",
+          "default": "#909090"
         },
         {
           "label": "Kaardi taust",

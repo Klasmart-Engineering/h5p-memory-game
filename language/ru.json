@@ -50,6 +50,22 @@
           "description": "Постарайтесь сопоставить количество столбцов и строк при разложении карточек. После чего карточки будут масштабироваться до размера контейнера."
         },
         {
+          "label": "Row/columns selection",
+          "description": "Enforce the number of rows/columns for the card layout.",
+          "fields": [
+            {
+              "label": "Rows"
+            },
+            {
+              "label": "Columns"
+            }
+          ]
+        },
+        {
+          "label": "Enforce layout on narrow screens",
+          "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used."
+        },
+        {
           "label": "Количество карточек для использования",
           "description": "Если установить значение больше 2, игра будет выбирать случайные карточки из списка."
         },
@@ -64,7 +80,8 @@
       "fields": [
         {
           "label": "Цвет темы",
-          "description": "Выберите цвет, чтобы создать тему для своей карточной игры."
+          "description": "Выберите цвет, чтобы создать тему для своей карточной игры.",
+          "default": "#909090"
         },
         {
           "label": "Обратная сторона карточки",

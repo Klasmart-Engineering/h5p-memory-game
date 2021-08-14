@@ -50,6 +50,22 @@
           "description": "Постарайтеся співставити кількість стовпчиків і рядків при разкладанні карточок. Після чого карточки будуть масштабуватися до разміру контейнера."
         },
         {
+          "label": "Row/columns selection",
+          "description": "Enforce the number of rows/columns for the card layout.",
+          "fields": [
+            {
+              "label": "Rows"
+            },
+            {
+              "label": "Columns"
+            }
+          ]
+        },
+        {
+          "label": "Enforce layout on narrow screens",
+          "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used."
+        },
+        {
           "label": "Кількість карточок для використання",
           "description": "Якщо встановити значення більше 2, гра будет обирати випадкові карточки із списку."
         },
@@ -64,7 +80,8 @@
       "fields": [
         {
           "label": "Колір теми",
-          "description": "Оберіть колір, щоб створити тему для своеї карточної гри."
+          "description": "Оберіть колір, щоб створити тему для своеї карточної гри.",
+          "default": "#909090"
         },
         {
           "label": "Зворотня сторона карточки",

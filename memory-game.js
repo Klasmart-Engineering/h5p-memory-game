@@ -438,6 +438,20 @@ H5P.MemoryGame = (function (EventDispatcher, $) {
       }
 
       if ($list.children().length) {
+        // Determine enforced number of columns
+        const ratio = parameters.behaviour.ratio;
+        if (ratio.rows || ratio.columns) {
+          if (ratio.rows && !ratio.columns) {
+            this.forceCols = Math.ceil($list.children().length / Math.min(ratio.rows, $list.children().length));
+          }
+          else if (!ratio.rows && ratio.columns) {
+            this.forceCols = Math.min(ratio.columns, $list.children().length);
+          }
+          else if ($list.children().length / ratio.rows === ratio.columns) {
+            this.forceCols = ratio.columns;
+          }
+        }
+
         cards[0].makeTabbable();
 
         $('<div/>', {
@@ -513,12 +527,15 @@ H5P.MemoryGame = (function (EventDispatcher, $) {
       }
 
       // Determine the optimal number of columns
-      var newNumCols = Math.ceil(Math.sqrt($elements.length));
+      var newNumCols = this.forceCols || Math.ceil(Math.sqrt($elements.length));
 
-      // Do not exceed the max number of columns
-      var maxCols = Math.floor(maxWidth / CARD_MIN_SIZE);
-      if (newNumCols > maxCols) {
-        newNumCols = maxCols;
+      // Keep layout if enforced even though cards may become too small
+      if (!parameters.behaviour.keepLayout) {
+        // Do not exceed the max number of columns
+        var maxCols = Math.floor(maxWidth / CARD_MIN_SIZE);
+        if (newNumCols > maxCols) {
+          newNumCols = maxCols;
+        }
       }
 
       if (numCols !== newNumCols) {
@@ -529,6 +546,7 @@ H5P.MemoryGame = (function (EventDispatcher, $) {
         // want things sticking out…)
         var colSize = Math.floor((100 / numCols) * 10000) / 10000;
         $elements.css('width', colSize + '%').each(function (i, e) {
+          $(e).removeClass('h5p-row-break');
           if (i === numCols) {
             $(e).addClass('h5p-row-break');
           }

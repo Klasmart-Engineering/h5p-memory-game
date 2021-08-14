@@ -50,6 +50,22 @@
           "description": "Κατά τη διάταξη των καρτών επιχειρείται ο αριθμός των στηλών να είναι ίδιος με τον αριθμό των γραμμών. Οι διαστάσεις των καρτών προσαρμόζονται."
         },
         {
+          "label": "Row/columns selection",
+          "description": "Enforce the number of rows/columns for the card layout.",
+          "fields": [
+            {
+              "label": "Rows"
+            },
+            {
+              "label": "Columns"
+            }
+          ]
+        },
+        {
+          "label": "Enforce layout on narrow screens",
+          "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used."
+        },
+        {
           "label": "Αριθμός καρτών που χρησιμοποιούνται",
           "description": "Επιλέγοντας αριθμό μεγαλύτερο του δύο (2) οδηγείτε το παιχνίδι στην τυχαία επιλογή καρτών από τη συνολική λίστα."
         },
@@ -64,7 +80,8 @@
       "fields": [
         {
           "label": "Χρώμα \"θέματος\"",
-          "description": "Επιλέξτε ένα χρώμα για τη δημιουργία \"θέματος\" για το παιχνίδι μνήμης."
+          "description": "Επιλέξτε ένα χρώμα για τη δημιουργία \"θέματος\" για το παιχνίδι μνήμης.",
+          "default": "#909090"
         },
         {
           "label": "Πίσω πλευρά καρτών",

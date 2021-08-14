@@ -50,6 +50,22 @@
           "description": "Bij het leggen van de kaarten zullen het aantal kolommen en rijen op elkaar worden afgestemd. Daarna zal de omvang van de kaarten worden aangepast om in de beschikbare omgeving te passen."
         },
         {
+          "label": "Row/columns selection",
+          "description": "Enforce the number of rows/columns for the card layout.",
+          "fields": [
+            {
+              "label": "Rows"
+            },
+            {
+              "label": "Columns"
+            }
+          ]
+        },
+        {
+          "label": "Enforce layout on narrow screens",
+          "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used."
+        },
+        {
           "label": "Het aantal te gebruiken kaarten",
           "description": "Als je dit getal instelt op een aantal groter dan 2, dan zal het spel willekeurig kaarten kiezen uit de complete lijst met kaarten."
         },
@@ -64,7 +80,8 @@
       "fields": [
         {
           "label": "Themakleur",
-          "description": "Kies een themakleur voor kaarten van je geheugenspel."
+          "description": "Kies een themakleur voor kaarten van je geheugenspel.",
+          "default": "#909090"
         },
         {
           "label": "Achterkant kaart",

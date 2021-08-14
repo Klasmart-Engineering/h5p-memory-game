@@ -50,6 +50,22 @@
           "description": "Vil forsøk å samsvare antall kolonner og rader når kortene legges ut. Etterpå vil kortene bli skalert til å passe beholderen."
         },
         {
+          "label": "Row/columns selection",
+          "description": "Enforce the number of rows/columns for the card layout.",
+          "fields": [
+            {
+              "label": "Rows"
+            },
+            {
+              "label": "Columns"
+            }
+          ]
+        },
+        {
+          "label": "Enforce layout on narrow screens",
+          "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used."
+        },
+        {
           "label": "Antall kort som skal brukes",
           "description": "Ved å sette antallet høyere enn 2 vil spillet plukke tilfeldige kort fra listen over kort."
         },
@@ -64,7 +80,8 @@
       "fields": [
         {
           "label": "Temafarge",
-          "description": "Velg en farge for å skape et tema over kortspillet ditt."
+          "description": "Velg en farge for å skape et tema over kortspillet ditt.",
+          "default": "#909090"
         },
         {
           "label": "Kortbaksiden",

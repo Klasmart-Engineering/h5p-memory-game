@@ -50,6 +50,22 @@
           "description": "카드를 놓을 때 열과 행의 개수를 맞추려고 할 것이다. 이후, 카드는 용기에 맞게 크기가 조정될 것이다."
         },
         {
+          "label": "Row/columns selection",
+          "description": "Enforce the number of rows/columns for the card layout.",
+          "fields": [
+            {
+              "label": "Rows"
+            },
+            {
+              "label": "Columns"
+            }
+          ]
+        },
+        {
+          "label": "Enforce layout on narrow screens",
+          "description": "The content type will reduce the number of columns if the cards become to small. Activate this setting if you want to enforce a given number of columns even on a narrow screen knowing that cards may become too small to be used."
+        },
+        {
           "label": "사용할 카드 수",
           "description": "이것을 2보다 큰 숫자로 설정하면 게임이 카드 목록에서 무작위 카드를 선택하게 될 것이다."
         },
@@ -64,12 +80,12 @@
       "fields": [
         {
           "label": "테마 색깔",
-          "description": "카드 게임의 테마를 만들 색을 선택하십시오."
+          "description": "카드 게임의 테마를 만들 색을 선택하십시오.",
+          "default": "#909090"
         },
         {
           "label": "카드 뒷면",
           "description": "카드의 뒷면을 맞춤형으로 사용하십시오."
-          
         }
       ]
     },
