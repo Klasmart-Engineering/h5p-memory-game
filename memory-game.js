@@ -31,6 +31,10 @@ H5P.MemoryGame = (function (EventDispatcher, $) {
 
     // Add defaults
     parameters = $.extend(true, {
+      behaviour: {
+        ratio: {},
+        keepLayout: false
+      },
       l10n: {
         cardTurns: 'Card turns',
         timeSpent: 'Time spent',
