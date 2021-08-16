@@ -569,7 +569,7 @@ H5P.MemoryGame = (function (EventDispatcher, $) {
       // due to rounding errors in browsers the margins may vary a bit…
     };
 
-    if (parameters.behaviour && parameters.behaviour.useGrid && cardsToUse.length) {
+    if (parameters.behaviour && (parameters.behaviour.useGrid || parameters.behaviour.ratio.rows || parameters.behaviour.ratio.columns) && cardsToUse.length) {
       self.on('resize', scaleGameSize);
     }
   }
