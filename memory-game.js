@@ -22,7 +22,7 @@ H5P.MemoryGame = (function (EventDispatcher, $) {
     // Initialize event inheritance
     EventDispatcher.call(self);
 
-    var flipped, timer, counter, popup, $bottom, $taskComplete, $feedback, $wrapper, maxWidth, numCols, audioCard;
+    var flipped, timer, counter, popup, $bottom, $taskComplete, $feedback, $wrapper, numCols, audioCard;
     var cards = [];
     var flipBacks = []; // Que of cards to be flipped back
     var numFlipped = 0;
@@ -185,7 +185,6 @@ H5P.MemoryGame = (function (EventDispatcher, $) {
 
         // Scale new layout
         $wrapper.children('ul').children('.h5p-row-break').removeClass('h5p-row-break');
-        maxWidth = -1;
         self.trigger('resize');
         cards[0].setFocus();
       }, 600);
@@ -500,7 +499,7 @@ H5P.MemoryGame = (function (EventDispatcher, $) {
         });
       }
       else {
-        const $foo = $('<div/>')
+        $('<div/>')
           .text('No card was added to the memory game!')
           .appendTo($list);
 
@@ -524,8 +523,6 @@ H5P.MemoryGame = (function (EventDispatcher, $) {
      * @private
      */
     var scaleGameSize = function () {
-      const that = this;
-
       // Check how much space we have available
       var $list = this.$container.children('ul');
       $list.css('max-width', '');
@@ -583,10 +580,8 @@ H5P.MemoryGame = (function (EventDispatcher, $) {
       if (displayLimits && displayLimits.height && this.wasInitialized) {
         if (enforceGrid) {
           const cardOuter = $elements[0];
-          cardInner = cardOuter.querySelector('.h5p-memory-card');
+          var cardInner = cardOuter.querySelector('.h5p-memory-card');
           const fontScale = (cardInner.offsetHeight + 0.5 * (cardOuter.offsetHeight - cardInner.offsetHeight)) / cardOuter.offsetHeight;
-
-          const containerHeight = this.$container.outerHeight();
           const footerHeight = this.$container.find('.h5p-status').outerHeight(true);
           maxCardsHeight = (displayLimits.height - footerHeight) * fontScale; // Account for shadows
 
