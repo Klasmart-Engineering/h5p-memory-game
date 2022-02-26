@@ -2,7 +2,7 @@
   "title": "Memory Game",
   "description": "See how many cards you can remember!",
   "majorVersion": 1,
-  "minorVersion": 4,
+  "minorVersion": 5,
   "patchVersion": 0,
   "runnable": 1,
   "author": "Joubel",
@@ -40,6 +40,11 @@
       "machineName": "FontAwesome",
       "majorVersion": 4,
       "minorVersion": 5
+    },
+    {
+      "machineName": "FontKidsLoop",
+      "majorVersion": 1,
+      "minorVersion": 0
     }
   ],
   "editorDependencies": [
