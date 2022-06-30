@@ -601,9 +601,7 @@ H5P.MemoryGame = (function (EventDispatcher, $) {
           if (numFlipped === self.cards.length) {
             finished({ skipXAPI: true });
           }
-          else {
-            self.timer.play();
-          }
+          // REMOVED ELSE TO PAUSE TIMER UNTILL USER CLICKS ON THE CARD AGAIN
         }
       }, 0);
     };
